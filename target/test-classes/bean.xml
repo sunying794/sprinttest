@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:msb="http://www.mashibing.org/schema/user"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.mashibing.org/schema/user http://www.mashibing.org/schema/user.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <aop:aspectj-autoproxy proxy-target-class="false" />
+    <!-- AnnotationAwareAspectJAutoProxyCreator     PostProcessor   -->
+
+<!--    <aop:config proxy-target-class="true" />-->
+    <context:component-scan base-package="com.mashibing.aspect" />
+
+
+
+
+         <!--目标对象 孩子类-->
+<!--         <bean id="child" class="com.mashibing.aop.Child"/>-->
+
+<!--         &lt;!&ndash;切面类&ndash;&gt;-->
+<!--         <bean id="mom" class="com.mashibing.aop.Mom"/>-->
+<!--         &lt;!&ndash;面向切面编程&ndash;&gt;-->
+<!--         <aop:config>-->
+<!--             &lt;!&ndash;定义切面&ndash;&gt;-->
+<!--             <aop:aspect id="as1" ref="mom">-->
+<!--                 <aop:pointcut id="action" expression="execution(* *.*(..))"/>-->
+<!--                 <aop:before method="buy" pointcut-ref="action"/>-->
+<!--                 <aop:after method="clear" pointcut-ref="action"/>-->
+<!--             </aop:aspect>-->
+<!--         </aop:config>-->
+
+
+
+</beans>
